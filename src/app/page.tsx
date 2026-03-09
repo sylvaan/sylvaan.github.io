@@ -42,7 +42,7 @@ export default function Home() {
       {/* Version Footer */}
       <div className="absolute bottom-6 left-0 right-0 text-center z-10">
         <p className="text-gray-500 text-xs font-mono">
-          v1.0.0-wip • &copy; {new Date().getFullYear()} Sylvaan
+          v{require('../../package.json').version} • &copy; {new Date().getFullYear()} Sylvaan
         </p>
       </div>
     </div>

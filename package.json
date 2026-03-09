@@ -8,8 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "deploy": "npm version patch && next build && gh-pages -d out && git push --follow-tags"
   },
+
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.9",
     "next": "^15.2.0",
