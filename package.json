@@ -1,7 +1,7 @@
 {
   "name": "sylvaan.github.io",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,6 @@
     "lint": "next lint",
     "deploy": "npm version patch && next build && gh-pages -d out && git push --follow-tags"
   },
-
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.9",
     "next": "^15.2.0",
