@@ -1,12 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // Required for GitHub Pages
+  output: "export",
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  // If your GitHub repository name is NOT 'sylvaan.github.io' (user page),
-  // you might need a 'basePath'. But since it matches the username, it's usually root.
 };
 
 export default nextConfig;
