@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm version patch && next build && gh-pages -d out && git push --follow-tags"
+    "deploy": "npm version patch && next build && gh-pages -d out --dotfiles && git push --follow-tags"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.9",
