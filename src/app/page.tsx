@@ -112,7 +112,7 @@ export default function Home() {
                 GitHub
               </a>
               <a
-                href="https://www.linkedin.com/in/ahmad-ridhwan-naufal/"
+                href="https://www.linkedin.com/in/arnaufall/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-xs font-bold uppercase tracking-widest hover:text-emerald-700 transition-colors"
