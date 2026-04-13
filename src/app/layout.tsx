@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sylvaan's Space",
-  description: "A technical playground and portfolio.",
+  title: "Ahmad Ridhwan Naufal | Frontend Software Engineer",
+  description: "Portfolio of Ahmad Ridhwan Naufal, a Frontend Developer with a 4+ year track record building healthcare and enterprise web applications.",
 };
 
 export default function RootLayout({

@@ -1,10 +1,23 @@
 export const PROJECTS = [
   {
     id: 1,
+    title: "SetiaRasa POS",
+    category: "Personal / Freelance",
+    type: "Personal",
+    description: "Production POS system for a Martabak business handling catalog setup, active order flows, and daily financial analytics using React and Supabase.",
+    tech: ["React", "Zustand", "Supabase"],
+    link: "https://setiarasa-pos.vercel.app",
+    image: "/projects/setiarasa.png",
+    isMobile: true,
+    gradient: "from-emerald-500/20 to-emerald-500/5",
+    accent: "text-emerald-700"
+  },
+  {
+    id: 2,
     title: "Mobile for Patient",
     category: "Professional / Office",
     type: "Professional",
-    description: "Developed end-to-end patient flows including medical consultations, payment gateways, and medical assessments within a high-traffic healthcare ecosystem.",
+    description: "Developed patient flows including medical consultations, payment, and medical assessments at Periksa.id.",
     tech: ["Angular", "Ionic", "TypeScript"],
     link: "https://klinik.pasienperiksa.id",
     image: "/projects/mobile-klinik.png",
@@ -13,7 +26,7 @@ export const PROJECTS = [
     accent: "text-blue-700"
   },
   {
-    id: 2,
+    id: 3,
     title: "Mobile Klinik",
     category: "Professional / Office",
     type: "Professional",
@@ -26,24 +39,11 @@ export const PROJECTS = [
     accent: "text-teal-700"
   },
   {
-    id: 3,
-    title: "SetiaRasa POS",
-    category: "Personal / Freelance",
-    type: "Personal",
-    description: "A mobile-based POS system meant for a family Martabak business, focusing on order management efficiency and data analytics.",
-    tech: ["React", "Zustand", "Supabase"],
-    link: "https://setiarasa-pos.vercel.app",
-    image: "/projects/setiarasa.png",
-    isMobile: true,
-    gradient: "from-emerald-500/20 to-emerald-500/5",
-    accent: "text-emerald-700"
-  },
-  {
     id: 4,
     title: "The Wild Oasis Web",
     category: "Concept App",
     type: "Personal",
-    description: "Guest-facing booking site for luxury cabins in the Dolomites. Features gorgeous UI and real-time database integrations.",
+    description: "Guest-facing booking platform with cabin browsing, reservation flows, and authenticated guest accounts. Built with Next.js, Supabase, and Next-Auth.",
     tech: ["Next.js", "Supabase", "Next-Auth"],
     link: "https://sylvaan-oasis-website.vercel.app/",
     image: "/projects/oasis-website.png",
@@ -56,7 +56,7 @@ export const PROJECTS = [
     title: "Wild Oasis Dashboard",
     category: "Concept App",
     type: "Personal",
-    description: "Internal dashboard to manage cabin bookings, guests, and resort stats. Equipped with a robust data visualization interface.",
+    description: "Internal dashboard to manage cabin bookings, guests, and resort stats, featuring interactive data visualization and operational analytics.",
     tech: ["React", "TanStack Query", "Styled Comp."],
     link: "https://sylvaan-oasis-dashboard.vercel.app/dashboard",
     image: "/projects/oasis-dashboard.png",
@@ -64,18 +64,6 @@ export const PROJECTS = [
     gradient: "from-indigo-500/20 to-indigo-500/5",
     accent: "text-indigo-700"
   },
-  {
-    id: 6,
-    title: "PL Dashboard",
-    category: "Work In Progress 🚧",
-    type: "Personal",
-    description: "An upcoming Premier League (football) analytics dashboard. Currently in active development and architectural design phase.",
-    tech: ["Next.js", "TailwindCSS"],
-    link: "#",
-    isMobile: false,
-    gradient: "from-amber-500/20 to-amber-500/5",
-    accent: "text-amber-700"
-  }
 ];
 
 export const EXPERIENCES = [
@@ -84,14 +72,14 @@ export const EXPERIENCES = [
     role: "Frontend Developer",
     company: "periksa.id",
     period: "Jul 2023 - Present",
-    description: "Developing scalable web and mobile applications in the healthcare industry, with a core expertise in leveraging Angular and Ionic."
+    description: "Developed and maintained HRIS and patient portal modules including digital consultations, reimbursement flows, leave delegations, and electronic medical assessments using Angular and Ionic."
   },
   {
     id: 2,
     role: "Junior Front End Developer (Internship)",
     company: "periksa.id",
     period: "Dec 2021 - Jun 2023",
-    description: "Assisted in building responsive frontend solutions and optimizing user interfaces for healthcare software."
+    description: "Contributed to the initial development of the patient-facing mobile app using Angular and Ionic, alongside bug fixes and UI maintenance across clinical laboratory modules and daily assessment surveys."
   },
   {
     id: 3,
@@ -112,14 +100,14 @@ export const CERTIFICATIONS = [
   },
   {
     id: 2,
-    name: "Meta Front-End Developer Specialization",
+    name: "Meta Front-End Developer Professional Certificate",
     issuer: "Meta",
     date: "Feb 2026",
     link: "https://www.coursera.org/account/accomplishments/specialization/JZR4E28ECR7K"
   },
   {
     id: 3,
-    name: "Google Cybersecurity Specialization",
+    name: "Google Cybersecurity Professional Certificate",
     issuer: "Google",
     date: "Aug 2025",
     link: "https://www.coursera.org/account/accomplishments/specialization/FQ09MGU1XJ0K"

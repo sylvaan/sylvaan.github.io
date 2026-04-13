@@ -81,12 +81,8 @@ export default function Home() {
                 Mobile & Web Apps.
               </h1>
               <p className="text-lg md:text-xl text-slate-500 max-w-xl leading-relaxed">
-                A Frontend Developer with a 4+ year track record in the
-                healthcare industry. My core expertise lies in leveraging
-                Angular and Ionic to build robust, user-friendly solutions. I am
-                deeply passionate about continuous learning and am currently
-                expanding my skill set by actively developing with React,
-                Next.js, and Go.
+                A Frontend Developer with a 4+ year track record. I build frontend applications for 
+                healthcare and enterprise products — mostly Angular and React, always TypeScript.
               </p>
             </div>
 
@@ -342,6 +338,35 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ---------- CONTACT / FOOTER ---------- */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          id="contact"
+          className="max-w-7xl mx-auto px-8 pt-12 pb-24"
+        >
+          <div className="flex flex-col items-center justify-center text-center space-y-8 bg-slate-50 border border-slate-100 rounded-[2.5rem] p-12 md:p-24 shadow-sm">
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+              Let's Build Something <span className="text-emerald-700">Great.</span>
+            </h2>
+            <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed">
+              I am currently open to discussing new opportunities, building ambitious projects, or tackling complex engineering challenges.
+            </p>
+            <a 
+              href="mailto:arnaufal96@gmail.com"
+              className="inline-block px-10 py-4 bg-emerald-700 text-white font-bold text-lg rounded-xl shadow-lg shadow-emerald-700/20 hover:bg-emerald-800 hover:-translate-y-1 transition-all duration-300"
+            >
+              Get In Touch
+            </a>
+          </div>
+          
+          <div className="mt-16 text-center text-slate-400 text-sm font-medium tracking-wide">
+            &copy; {new Date().getFullYear()} Ahmad Ridhwan Naufal. All rights reserved.
+          </div>
+        </motion.section>
       </main>
 
       {/* ---------- ORNAMENTS ---------- */}
