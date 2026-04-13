@@ -119,14 +119,7 @@ export default function Home() {
               >
                 LinkedIn
               </a>
-              <a
-                href="https://www.instagram.com/ahmadd.riidhwan/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs font-bold uppercase tracking-widest hover:text-emerald-700 transition-colors"
-              >
-                Instagram
-              </a>
+
             </div>
           </motion.div>
         </section>
@@ -353,7 +346,7 @@ export default function Home() {
               Let's Build Something <span className="text-emerald-700">Great.</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed">
-              I am currently open to discussing new opportunities and building projects.
+              I am currently open to discussing new opportunities and building projects, particularly in product-focused companies.
             </p>
             <a 
               href="mailto:arnaufal96@gmail.com"

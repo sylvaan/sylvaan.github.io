@@ -30,7 +30,7 @@ export const PROJECTS = [
     title: "Mobile Klinik",
     category: "Professional / Office",
     type: "Professional",
-    description: "Engineered core HRIS modules for clinic staff, focusing on seamless reimbursement flows, leave request delegations, and attendance tracking.",
+    description: "Engineered core HRIS modules for clinic staff, focusing on reimbursement flows, leave request delegations, and attendance tracking.",
     tech: ["Angular", "Ionic", "TypeScript"],
     link: "https://staging.mobileperiksa.id",
     image: "/projects/klinik.png",
