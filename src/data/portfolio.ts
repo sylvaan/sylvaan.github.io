@@ -10,7 +10,9 @@ export const PROJECTS = [
     image: "/projects/setiarasa.png",
     isMobile: true,
     gradient: "from-emerald-500/20 to-emerald-500/5",
-    accent: "text-emerald-700"
+    accent: "text-emerald-700",
+    hoverBorder: "group-hover:border-emerald-500/30",
+    hoverShadow: "group-hover:shadow-lg group-hover:shadow-emerald-500/10"
   },
   {
     id: 2,
@@ -23,7 +25,9 @@ export const PROJECTS = [
     image: "/projects/mobile-klinik.png",
     isMobile: true,
     gradient: "from-blue-500/20 to-blue-500/5",
-    accent: "text-blue-700"
+    accent: "text-blue-700",
+    hoverBorder: "group-hover:border-blue-500/30",
+    hoverShadow: "group-hover:shadow-lg group-hover:shadow-blue-500/10"
   },
   {
     id: 3,
@@ -36,7 +40,9 @@ export const PROJECTS = [
     image: "/projects/klinik.png",
     isMobile: true,
     gradient: "from-teal-500/20 to-teal-500/5",
-    accent: "text-teal-700"
+    accent: "text-teal-700",
+    hoverBorder: "group-hover:border-teal-500/30",
+    hoverShadow: "group-hover:shadow-lg group-hover:shadow-teal-500/10"
   },
   {
     id: 4,
@@ -49,7 +55,9 @@ export const PROJECTS = [
     image: "/projects/oasis-website.png",
     isMobile: false,
     gradient: "from-purple-500/20 to-purple-500/5",
-    accent: "text-purple-700"
+    accent: "text-purple-700",
+    hoverBorder: "group-hover:border-purple-500/30",
+    hoverShadow: "group-hover:shadow-lg group-hover:shadow-purple-500/10"
   },
   {
     id: 5,
@@ -62,27 +70,43 @@ export const PROJECTS = [
     image: "/projects/oasis-dashboard.png",
     isMobile: false,
     gradient: "from-indigo-500/20 to-indigo-500/5",
-    accent: "text-indigo-700"
+    accent: "text-indigo-700",
+    hoverBorder: "group-hover:border-indigo-500/30",
+    hoverShadow: "group-hover:shadow-lg group-hover:shadow-indigo-500/10"
   },
 ];
 
 export const EXPERIENCES = [
   {
     id: 1,
-    role: "Frontend Developer",
-    company: "periksa.id",
-    period: "Jul 2023 - Present",
-    description: "Developed and maintained HRIS and patient portal modules including digital consultations, reimbursement flows, leave delegations, and electronic medical assessments using Angular and Ionic."
+    role: "Software Engineer",
+    company: "Bank Mandiri",
+    period: "Jul 2026 - Present",
+    description: "Developing and optimizing digital banking applications using Angular within the SME IT Digital Delivery team, collaborating with cross-functional teams to deliver secure and scalable features."
   },
   {
     id: 2,
-    role: "Junior Front End Developer (Internship)",
+    role: "Frontend Developer",
     company: "periksa.id",
-    period: "Dec 2021 - Jun 2023",
-    description: "Contributed to the initial development of the patient-facing mobile app using Angular and Ionic, alongside bug fixes and UI maintenance across clinical laboratory modules and daily assessment surveys."
+    period: "Jul 2023 - Jul 2026",
+    description: "Developed and maintained HRIS and patient portal modules including digital consultations, reimbursement flows, leave delegations, and electronic medical assessments using Angular and Ionic."
   },
   {
     id: 3,
+    role: "Junior Frontend Developer (Contract)",
+    company: "periksa.id",
+    period: "Mar 2023 - Jun 2023",
+    description: "Contributed to the development of patient-facing mobile modules, clinical laboratory reports, and HRIS reimbursement workflows using Angular and Ionic."
+  },
+  {
+    id: 4,
+    role: "Junior Frontend Developer (Internship)",
+    company: "periksa.id",
+    period: "Dec 2021 - Feb 2023",
+    description: "Assisted in the initial development of patient-facing mobile apps, focusing on bug fixes, UI maintenance, and daily medical assessment survey forms."
+  },
+  {
+    id: 5,
     role: "Bachelor of Engineering - Computer Science",
     company: "BINUS University",
     period: "2019 - 2023",

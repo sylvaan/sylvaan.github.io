@@ -13,7 +13,13 @@ export default function Home() {
     filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.type === filter);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans antialiased overflow-x-hidden">
+    <div className="relative min-h-screen text-slate-900 font-sans antialiased overflow-x-hidden">
+      {/* ---------- SOLID BASE BACKGROUND ---------- */}
+      <div className="absolute inset-0 -z-30 bg-white pointer-events-none" />
+
+      {/* ---------- LINEAR GRID BACKGROUND ---------- */}
+      <div className="absolute inset-0 -z-20 h-full w-full bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+
       {/* ---------- NAVIGATION ---------- */}
       <nav className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto border-b border-slate-100">
         <div className="text-xl font-bold tracking-tight">SYLVAAN.</div>
@@ -43,7 +49,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full md:w-1/2 flex justify-center"
           >
-            <div className="relative w-full max-w-sm aspect-square bg-emerald-50 rounded-full overflow-hidden shadow-2xl group border-[6px] border-white ring-4 ring-emerald-50/50">
+            <div className="relative w-full max-w-sm aspect-square bg-slate-100 rounded-[2.5rem] overflow-hidden shadow-xl group border-[6px] border-white ring-4 ring-slate-100/50 rotate-2 hover:rotate-0 transition-all duration-500">
               <Image
                 src="/profile.jpeg"
                 alt="Ahmad Ridhwan Naufal Profile"
@@ -51,12 +57,7 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, 384px"
                 className="object-cover object-[50%_40%] transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center text-emerald-800/50 font-medium italic -z-10 text-center px-4">
-                Add profile.jpg
-                <br />
-                in public folder
-              </div>
-              <div className="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-slate-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </motion.div>
 
@@ -102,24 +103,29 @@ export default function Home() {
             </div>
 
             {/* Social Links */}
-            <div className="pt-8 flex gap-6 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all text-slate-600">
+            <div className="pt-8 flex gap-4 text-slate-700">
               <a
                 href="https://github.com/sylvaan"
                 target="_blank"
                 rel="noreferrer"
-                className="text-xs font-bold uppercase tracking-widest hover:text-emerald-700 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-md border border-slate-200/60 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300 shadow-sm"
               >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/>
+                </svg>
                 GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/arnaufall/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-xs font-bold uppercase tracking-widest hover:text-emerald-700 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-md border border-slate-200/60 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] transition-all duration-300 shadow-sm"
               >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
                 LinkedIn
               </a>
-
             </div>
           </motion.div>
         </section>
@@ -136,8 +142,7 @@ export default function Home() {
                 Selected <span className="text-emerald-700">Projects</span>
               </h2>
               <p className="text-lg text-slate-500">
-                A collection of my recent work across web development, UI/UX
-                design, and digital experiences.
+                A collection of my recent work across web development and digital experiences.
               </p>
             </div>
             <a
@@ -193,7 +198,7 @@ export default function Home() {
               >
                 {/* Image / Visual Area */}
                 <div
-                  className={`relative w-full aspect-video rounded-2xl overflow-hidden mb-6 bg-gradient-to-br transition-all duration-500 border border-slate-100 ${project.image && !project.isMobile ? "" : project.gradient}`}
+                  className={`relative w-full aspect-video rounded-2xl overflow-hidden mb-6 bg-white bg-gradient-to-br transition-all duration-500 border border-slate-100 ${project.hoverBorder} ${project.hoverShadow} ${project.image && !project.isMobile ? "" : project.gradient}`}
                 >
                   {project.image ? (
                     <>
@@ -275,7 +280,7 @@ export default function Home() {
             {/* Experience Column */}
             <div>
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 mb-10">
-                Work <span className="text-emerald-700">Experience</span>
+                Work & <span className="text-emerald-700">Education</span>
               </h2>
               <div className="space-y-10">
                 {EXPERIENCES.map((exp) => (
@@ -363,8 +368,8 @@ export default function Home() {
       </main>
 
       {/* ---------- ORNAMENTS ---------- */}
-      <div className="fixed -z-10 top-[-20%] left-[-10%] w-[50%] h-[50%] bg-emerald-50/50 rounded-full blur-[120px] pointer-events-none" />
-      <div className="fixed -z-10 top-[40%] right-[-10%] w-[40%] h-[40%] bg-blue-50/30 rounded-full blur-[100px] pointer-events-none" />
+      <div className="fixed -z-10 top-[-10%] left-[-10%] w-[45vw] h-[45vw] bg-emerald-400/15 rounded-full blur-[120px] animate-float pointer-events-none" />
+      <div className="fixed -z-10 top-[25%] right-[-10%] w-[40vw] h-[40vw] bg-blue-400/15 rounded-full blur-[130px] animate-float-delayed pointer-events-none" />
     </div>
   );
 }
