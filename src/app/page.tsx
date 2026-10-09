@@ -74,7 +74,7 @@ export default function Home() {
                   Ahmad Ridhwan Naufal
                 </span>
                 <span className="-ml-3 inline-block px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full border border-emerald-100">
-                  Frontend Software Engineer
+                  Software Engineer
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
@@ -82,8 +82,7 @@ export default function Home() {
                 Mobile & Web Apps.
               </h1>
               <p className="text-lg md:text-xl text-slate-500 max-w-xl leading-relaxed">
-                A Frontend Developer with a 4+ year track record. I build frontend applications for 
-                healthcare and enterprise products — mostly Angular and React, always TypeScript.
+                Frontend Software Engineer with 4+ years of experience building high-performance web and mobile applications for enterprise banking and digital healthcare. Specialized in Angular, React, and TypeScript with a strong focus on scalable architecture and user experience.
               </p>
             </div>
 
@@ -180,79 +179,94 @@ export default function Home() {
             variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
             className="grid grid-cols-1 md:grid-cols-2 gap-12"
           >
-            {filteredProjects.map((project) => (
-              <motion.a
-                variants={{
-                  hidden: { opacity: 0, y: 50 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 0.8, ease: "easeOut" },
-                  },
-                }}
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
-                key={project.id}
-                className="group block"
-              >
-                {/* Image / Visual Area */}
-                <div
-                  className={`relative w-full aspect-video rounded-2xl overflow-hidden mb-6 bg-white bg-gradient-to-br transition-all duration-500 border border-slate-100 ${project.hoverBorder} ${project.hoverShadow} ${project.image && !project.isMobile ? "" : project.gradient}`}
+            {filteredProjects.map((project) => {
+              const CardComponent = project.link ? motion.a : motion.div;
+              const cardProps = project.link
+                ? { href: project.link, target: "_blank", rel: "noreferrer" }
+                : {};
+
+              return (
+                <CardComponent
+                  key={project.id}
+                  variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.8, ease: "easeOut" },
+                    },
+                  }}
+                  {...cardProps}
+                  className={`group block ${!project.link ? "cursor-default" : ""}`}
                 >
-                  {project.image ? (
-                    <>
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        unoptimized
-                        className={`${project.isMobile ? "object-contain p-4" : "object-cover"} transition-transform duration-700 ease-out group-hover:scale-105`}
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                      {/* Dark overlay on hover */}
-                      <div className="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </>
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center flex-col gap-2">
-                      <span
-                        className={`font-bold opacity-30 ${project.accent}`}
-                      >
-                        Work In Progress 🚧
+                  {/* Image / Visual Area */}
+                  <div
+                    className={`relative w-full aspect-video rounded-2xl overflow-hidden mb-6 bg-white bg-gradient-to-br transition-all duration-500 border border-slate-100 ${project.hoverBorder} ${project.hoverShadow} ${project.image && !project.isMobile ? "" : project.gradient}`}
+                  >
+                    {project.image ? (
+                      <>
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          unoptimized
+                          className={`${project.isMobile ? "object-contain p-4" : "object-cover"} transition-transform duration-700 ease-out group-hover:scale-105`}
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                        {/* Dark overlay on hover */}
+                        <div className="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      </>
+                    ) : (
+                      <div className={`absolute inset-0 flex items-center justify-center flex-col gap-3 p-6 text-center bg-gradient-to-br ${project.gradient}`}>
+                        <div className="w-16 h-16 rounded-2xl bg-white/70 backdrop-blur-md shadow-sm border border-white/60 flex items-center justify-center text-3xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                          {project.isMobile ? "📱" : "💻"}
+                        </div>
+                        <div className="space-y-1">
+                          <span className={`text-sm font-bold tracking-wide ${project.accent}`}>
+                            {project.title}
+                          </span>
+                          <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                            Internal Enterprise App
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Content Area */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold tracking-widest uppercase rounded-md">
+                        {project.category}
                       </span>
-                      <div className="w-24 h-24 bg-white/40 backdrop-blur-md rounded-xl rotate-12 group-hover:rotate-6 group-hover:scale-110 transition-all duration-500" />
+                      {!project.link && (
+                        <span className="inline-block px-2.5 py-1 bg-slate-100 text-slate-400 text-[10px] font-bold tracking-wider uppercase rounded-md">
+                          Internal App
+                        </span>
+                      )}
                     </div>
-                  )}
-                </div>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-slate-500 mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
 
-                {/* Content Area */}
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold tracking-widest uppercase rounded-md">
-                      {project.category}
-                    </span>
+                    {/* Tech stack pills */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="text-xs font-medium text-slate-400 bg-white border border-slate-200 px-2 py-1 rounded-md"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-500 mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  {/* Tech stack pills */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs font-medium text-slate-400 bg-white border border-slate-200 px-2 py-1 rounded-md"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.a>
-            ))}
+                </CardComponent>
+              );
+            })}
           </motion.div>
 
           {/* Mobile view full archive link */}

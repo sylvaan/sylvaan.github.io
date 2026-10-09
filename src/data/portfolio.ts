@@ -1,6 +1,51 @@
 export const PROJECTS = [
   {
     id: 1,
+    title: "Livin' Food PWA",
+    category: "Professional / Office",
+    type: "Professional",
+    description: "Progressive Web App for F&B merchant ecosystem integrated into digital banking, enabling food ordering, merchant catalog, and checkout workflows.",
+    tech: ["Angular", "TypeScript", "PWA", "TailwindCSS"],
+    link: "",
+    image: "",
+    isMobile: true,
+    gradient: "from-amber-500/20 to-amber-500/5",
+    accent: "text-amber-700",
+    hoverBorder: "group-hover:border-amber-500/30",
+    hoverShadow: "group-hover:shadow-lg group-hover:shadow-amber-500/10"
+  },
+  {
+    id: 2,
+    title: "Livin' Merchant Monitoring Tools",
+    category: "Professional / Office",
+    type: "Professional",
+    description: "Internal operational dashboard for real-time merchant transaction monitoring, analytics, and system health tracking.",
+    tech: ["Angular", "TypeScript", "RxJS"],
+    link: "",
+    image: "",
+    isMobile: false,
+    gradient: "from-sky-500/20 to-sky-500/5",
+    accent: "text-sky-700",
+    hoverBorder: "group-hover:border-sky-500/30",
+    hoverShadow: "group-hover:shadow-lg group-hover:shadow-sky-500/10"
+  },
+  {
+    id: 3,
+    title: "Livin' Merchant Portal",
+    category: "Professional / Office",
+    type: "Professional",
+    description: "Web portal for merchant onboarding, store management, product catalog administration, and financial reporting.",
+    tech: ["Angular", "TypeScript", "TailwindCSS"],
+    link: "",
+    image: "",
+    isMobile: false,
+    gradient: "from-teal-500/20 to-teal-500/5",
+    accent: "text-teal-700",
+    hoverBorder: "group-hover:border-teal-500/30",
+    hoverShadow: "group-hover:shadow-lg group-hover:shadow-teal-500/10"
+  },
+  {
+    id: 4,
     title: "SetiaRasa POS",
     category: "Personal / Freelance",
     type: "Personal",
@@ -15,13 +60,13 @@ export const PROJECTS = [
     hoverShadow: "group-hover:shadow-lg group-hover:shadow-emerald-500/10"
   },
   {
-    id: 2,
+    id: 5,
     title: "Mobile for Patient",
     category: "Professional / Office",
     type: "Professional",
     description: "Developed patient flows including medical consultations, payment, and medical assessments at Periksa.id.",
     tech: ["Angular", "Ionic", "TypeScript"],
-    link: "https://klinik.pasienperiksa.id",
+    link: "",
     image: "/projects/mobile-klinik.png",
     isMobile: true,
     gradient: "from-blue-500/20 to-blue-500/5",
@@ -30,13 +75,13 @@ export const PROJECTS = [
     hoverShadow: "group-hover:shadow-lg group-hover:shadow-blue-500/10"
   },
   {
-    id: 3,
+    id: 6,
     title: "Mobile Klinik",
     category: "Professional / Office",
     type: "Professional",
     description: "Engineered core HRIS modules for clinic staff, focusing on reimbursement flows, leave request delegations, and attendance tracking.",
     tech: ["Angular", "Ionic", "TypeScript"],
-    link: "https://staging.mobileperiksa.id",
+    link: "",
     image: "/projects/klinik.png",
     isMobile: true,
     gradient: "from-teal-500/20 to-teal-500/5",
@@ -45,7 +90,7 @@ export const PROJECTS = [
     hoverShadow: "group-hover:shadow-lg group-hover:shadow-teal-500/10"
   },
   {
-    id: 4,
+    id: 7,
     title: "The Wild Oasis Web",
     category: "Concept App",
     type: "Personal",
@@ -60,7 +105,7 @@ export const PROJECTS = [
     hoverShadow: "group-hover:shadow-lg group-hover:shadow-purple-500/10"
   },
   {
-    id: 5,
+    id: 8,
     title: "Wild Oasis Dashboard",
     category: "Concept App",
     type: "Personal",
@@ -82,7 +127,7 @@ export const EXPERIENCES = [
     role: "Software Engineer",
     company: "Bank Mandiri",
     period: "Jul 2026 - Present",
-    description: "Developing and optimizing digital banking applications using Angular within the SME IT Digital Delivery team, collaborating with cross-functional teams to deliver secure and scalable features."
+    description: "Developing and optimizing enterprise digital banking solutions and merchant ecosystem applications using Angular and TypeScript, focusing on high-performance workflows and scalable frontend architecture."
   },
   {
     id: 2,
